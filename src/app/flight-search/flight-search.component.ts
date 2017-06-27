@@ -49,7 +49,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //returns an object to be used as either an origin or destination slice object
-  createDeparture(origin, destination, date) {
+  createDeparture(origin, destination, date): any {
     return {
       origin: origin,
       destination: destination,
@@ -58,7 +58,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //Applies the date selected in the datepicker
-  changeDate(inputName, date) {
+  changeDate(inputName, date): void {
     if (inputName === 'departure') {
       this.searchForm.patchValue({ request: { departure: { date: date } } });
     } else {
@@ -66,7 +66,7 @@ export class FlightSearchComponent implements OnInit {
     }
   }
   //Submits form if it is valid
-  submitForm(value, valid) {
+  submitForm(value, valid): void {
     if (valid) {
       this.loading = true;
       this.searchFlights(this.formatData(value));
@@ -74,7 +74,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //Formats the form data into the required payload for the API request
-  formatData(data) {
+  formatData(data): any {
     return {
       request: {
         passengers: data.request.passengers,
@@ -84,14 +84,14 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //resets neccessary state based items
-  resetData() {
+  resetData(): void {
     this.repsonseErrors = false;
     this.limit += 20;
     this.noResults = false;
   }
 
   //Request data from the API via search service and handles data.
-  searchFlights = (payload) => {
+  searchFlights = (payload): void => {
     this.resetData();
     this.flightData = [];
     this.SearchService.getFlights(payload)
@@ -112,8 +112,8 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //Attempt to parse and display errors returned from the API
-  parseError(err) {
-    let message;
+  parseError(err): string {
+    let message: any;
     if (err.code === 400) {
       //handle input errors
       message = err.message.split('  ');
@@ -133,7 +133,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   //Increase the limit of results(simulates a lazy load)
-  moreResults() {
+  moreResults(): void {
     this.limit += 20;
   }
 }

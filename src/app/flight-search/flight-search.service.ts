@@ -10,12 +10,12 @@ export class FlightSearchService {
 	constructor(private http: Http) { }
 
 	//Pipe function for executing a series of functions. - Todo move to a helper class
-	pipe(...funcs) {
+	pipe(...funcs): any {
 		return funcs.reduce((previousFn, currentFn) => (...args) => currentFn(previousFn(...args)))
 	}
 
 	//Get flights form API and return and observable/
-	getFlights(payload) {
+	getFlights(payload): Observable<any> {
 		// ...using get request
 		return this.http.post(config.API_URL(), payload)
 			// ...and calling .json() on the response to return data
@@ -33,7 +33,7 @@ export class FlightSearchService {
 	}
 
 	//Get prices for trip
-	getPrices(obj) {
+	getPrices(obj): any {
 		obj.pricing = {
 			saleFareTotal: obj.data.pricing[0].saleFareTotal,
 			saleTax: obj.data.pricing[0].saleTaxTotal,
@@ -43,13 +43,13 @@ export class FlightSearchService {
 	}
 
 	//Get the flight ID
-	setId(obj) {
+	setId(obj): any {
 		obj.id = obj.data.id;
 		return obj;
 	}
 
 	//Parse data returned for departure or return and convert to a trip object for displaying.
-	createFlightDetails(obj, index, type) {
+	createFlightDetails(obj, index, type): any {
 		obj[type].flightNumber = obj.data.slice[index].segment[0].flight.number || null;
 		obj[type].carrierCode = obj.data.slice[index].segment[0].flight.carrier || null;
 		obj[type].cabin = obj.data.slice[index].segment[0].cabin || null;
@@ -70,26 +70,26 @@ export class FlightSearchService {
 	}
 
 	//Create Departure Object
-	createDepartureObject(obj) {
+	createDepartureObject(obj): any {
 		obj.departure = {};
 		return this.createFlightDetails(obj, 0, 'departure')
 	}
 
 	//Create Return Object
-	createReturnObject(obj, y) {
+	createReturnObject(obj, y): any {
 		obj.return = {};
 		return this.createFlightDetails(obj, 1, 'return')
 	}
 
 	//Get supporting information for flights - used to return a flights city, airports, or carrier information
-	getSupportInfo (data, match, type?) {
+	getSupportInfo (data, match, type?): any {
 		return data.filter((o,i) => {
 			return o.code === match;
 		})[0];
 	}
 
 	//Removed the original data object.
-	removeOriginalData(obj) {
+	removeOriginalData(obj): any {
 		if (typeof obj !== 'undefined' && typeof obj.data !== 'undefined') {
 			delete obj.data
 		}
@@ -97,7 +97,7 @@ export class FlightSearchService {
 	}
 
 	//Format time for display
-	timeConvert(n) {
+	timeConvert(n): string {
 		var num = n;
 		var hours = (num / 60);
 		var rhours = Math.floor(hours);

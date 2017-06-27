@@ -19,6 +19,7 @@ This project uses the [google QPX express API](https://developers.google.com/qpx
 - proper variable typing,
 - better connection flight information
 - proper pagination
+- currency / cost formatting.
 - create utility function file
 
 ##Angular CLI info
