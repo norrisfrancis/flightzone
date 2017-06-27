@@ -1,5 +1,5 @@
 # FlightZone
-###Welcome to FlightZone, a simple tool that allows users to find round trip flights available based on inputted critera
+#### Welcome to FlightZone, a simple tool that allows users to find round trip flights available based on inputted critera
 
 To get the project running.
 
@@ -14,15 +14,16 @@ This project uses the [google QPX express API](https://developers.google.com/qpx
 
 `Add your API key to the config file found in the main directory (config.ts)`
 
-##Todo:
+## Todo:
 
 - proper variable typing,
+- sorting options for flights(price, date, connections)
 - better connection flight information
 - proper pagination
 - currency / cost formatting.
 - create utility function file
 
-##Angular CLI info
+## Angular CLI info
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
