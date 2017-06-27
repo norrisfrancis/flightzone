@@ -7,25 +7,21 @@
 				Errors will be displayed below.</p>
 				<p *ngIf="repsonseErrors" class="error">{{repsonseErrors}}</p>
 				</div>
-				<div class="col-xs-12 col-sm-4">
-					<div formGroupName="passengers">
+				<div formGroupName="passengers" class="row">
+					<div class="col-xs-12 col-sm-4">
 						<label for="adults"># of adults</label>
 						<input class="form-control" id="adults" name="adults" type="number" placeholder="# of Adults" formControlName="adultCount"/>
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<div formGroupName="passengers">
+					<div class="col-xs-12 col-sm-4">
 						<label for="children"># of children</label>
 						<input class="form-control" id="children" name="children" type="number" placeholder="# of Children" formControlName="childCount"/>
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<div formGroupName="passengers">
+					<div class="col-xs-12 col-sm-4">
 						<label for="infants"># of infants</label>
 						<input class="form-control" id="infants" name="infants" type="number" placeholder="# of Infants" formControlName="infantInSeatCount"/>
 					</div>
 				</div>
-				<div formGroupName="departure">
+				<div formGroupName="departure" class="row">
 					<div class="form-group col-md-6">
 						<label for="departure">Departure Date</label>
 						<input type="text" class="form-control dd" name="departure" placeholder="Departure Date" formControlName="date"/>

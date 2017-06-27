@@ -10,12 +10,13 @@ Start the server.
 
 `ng serve --open`
 
-This project uses the [google QPX express API](https://developers.google.com/qpx-express/) to request flight information, go to [google developer console](https://console.developers.google.com/) to create an API KEY
+This project uses the [Google QPX express API](https://developers.google.com/qpx-express/) to request flight information, go to [Google developer console](https://console.developers.google.com/) to create an API KEY
 
 `Add your API key to the config file found in the main directory (config.ts)`
 
 ## Todo:
 
+- jsdoc style commenting
 - proper variable typing,
 - sorting options for flights(price, date, connections)
 - better connection flight information
