@@ -1,0 +1,30 @@
+.flight-search {
+	margin-top: 40px;
+	padding: 40px auto;
+	border-bottom: 1px solid #C9C9C9;
+}
+
+.flight-search-form {
+	width: 100%;
+
+}
+
+.flight-content {
+	margin-top: 40px;
+}
+
+.form-control {
+	margin-bottom: 15px;
+}
+
+.welcome, .error {
+	margin-bottom: 15px;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+button {
+	margin-bottom: 20px;
+}

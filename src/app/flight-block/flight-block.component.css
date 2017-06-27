@@ -1,0 +1,18 @@
+.flight-block {
+	text-align: left;
+	padding-bottom: 30px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #C9C9C9;
+}
+
+.block-title {
+	margin-bottom: 20px;
+}
+
+.flight-details > div, .flight-price > div {
+	margin-bottom: 15px;
+}
+
+.block-section {
+	margin-bottom: 30px;
+}

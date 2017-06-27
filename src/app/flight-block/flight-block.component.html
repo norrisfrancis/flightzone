@@ -1,0 +1,43 @@
+<div class="flight-block">
+	<div class="row">
+		<div class="col-md-5 block-section">
+			<div class="block-title">
+				<h4>Departure</h4>
+			</div>
+			<div class="flight-details">
+				<div>{{flight.departure.carrier.name}}({{flight.departure.carrier.code}}) {{flight.departure.cabin}}</div>
+				<div>Flight ID: {{flight.id}}</div>
+				<div>{{flight.departure.departureDate}} {{flight.departure.departureTime}}</div>
+				<div>({{flight.departure.origin}}) {{flight.departure.airport.name}} to ({{flight.return.origin}}) {{flight.return.airport.name}}</div>
+				<div *ngIf="flight.departure.connection">Connections: {{flight.departure.connections}}</div>
+				<div>Flight time: {{flight.departure.flightTime}}</div>
+				<div>Meal options: {{flight.departure.mealOptions}}</div>
+				<div *ngIf="flight.departure.connection">Connecting flight</div>
+			</div>
+		</div>
+		<div class="col-md-5 block-section">
+			<div class="block-title">
+				<h4>Return</h4>
+			</div>
+			<div class="flight-details">
+				<div>{{flight.return.carrier.name}}({{flight.return.carrier.code}}) {{flight.return.cabin}}</div>
+				<div>Flight ID: {{flight.id}}</div>
+				<div>{{flight.return.departureDate}} {{flight.return.departureTime}}</div>
+				<div>({{flight.return.origin}}) {{flight.return.airport.name}} to ({{flight.departure.origin}}) {{flight.departure.airport.name}}</div>
+				<div *ngIf="flight.return.connection">Connections: {{flight.return.connections}}</div>
+				<div>Flight time: {{flight.return.flightTime}}</div>
+				<div>Meal options: {{flight.return.mealOptions}}</div>
+			</div>
+		</div>
+		<div class="col-md-2 block-section">
+		<div class="block-title">
+				<h4>Price</h4>
+			</div>
+			<div class="flight-price">
+				<div>Price: {{flight.pricing.saleFareTotal}}</div>
+				<div>Tax: {{flight.pricing.saleTax}}</div>
+				<div>Total: {{flight.pricing.saleTotal}}</div>
+			</div>
+		</div>
+	</div>
+</div>
