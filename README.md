@@ -13,7 +13,7 @@ Start the server.
 
 This project uses the [Google QPX express API](https://developers.google.com/qpx-express/) to request flight information, go to [Google developer console](https://console.developers.google.com/) to create an API KEY
 
-`Add your API key to the config file found in the main directory (config.ts)`
+`Add your API key to the config file found in the /src/ directory (config.ts)`
 
 ## Todo:
 
