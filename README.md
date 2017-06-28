@@ -3,7 +3,8 @@
 
 To get the project running.
 
-Install the dependancies
+Install the dependencies
+
 `npm install`
 
 Start the server.
@@ -16,13 +17,13 @@ This project uses the [Google QPX express API](https://developers.google.com/qpx
 
 ## Todo:
 
-- jsdoc style commenting
-- proper variable typing,
-- sorting options for flights(price, date, connections)
-- better connection flight information
-- proper pagination
+- jsdoc style commenting.
+- proper variable typing.
+- sorting options for flights(price, date, connections).
+- better connection flight information.
+- proper pagination.
 - currency / cost formatting.
-- create utility function file
+- create utility function file.
 
 ## Angular CLI info
 
